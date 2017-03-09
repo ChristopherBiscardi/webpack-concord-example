@@ -2,16 +2,16 @@
   "name": "a",
   "version": "1.0.0",
   "description": "asda",
-  "main": "concord.js",
+  "main": "lib/concord.json",
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1"
   },
   "author": "",
   "license": "ISC",
   "concord": {
-    "main": "./concord.js",
-    "[server] main": "./concord.js",
-    "extensions": ["", ".js", ".coffee", ".less"],
+    "main": "./lib/concord.json",
+    "[server] main": "./lib/concord.json",
+    "extensions": ["", ".json", ".js", ".coffee", ".less"],
     "types": {
       "./lib/*.js": "object/javascript+commonjs+es5",
       "./lib/*.json": "object/json",
@@ -22,12 +22,6 @@
       "./package.json": "data+immutable/json",
       "socket.io": "promise+lazy/*",
       "socket.io/client": "object/javascript+amd"
-    },
-    "modules": {
-      "config": "./default-config",
-      "[web] config": "./web-config",
-      "./file": "./concord-file",
-      "./ignored": false
     }
   }
 }

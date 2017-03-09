@@ -1,2 +1,2 @@
-const thing = require('./a');
-console.log('a');
+const a = require('./a');
+console.log(a.some);
