@@ -1,0 +1,33 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "asda",
+  "main": "concord.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "concord": {
+    "main": "./concord.js",
+    "[server] main": "./concord.js",
+    "extensions": ["", ".js", ".coffee", ".less"],
+    "types": {
+      "./lib/*.js": "object/javascript+commonjs+es5",
+      "./lib/*.json": "object/json",
+      "./**/*.less": "stylesheet/less",
+      "[server] ./styles/*.less": "nothing/irrelevant",
+      "*.coffee": "object/coffeescript",
+      "*.{png|jpg|gif}": "url/image",
+      "./package.json": "data+immutable/json",
+      "socket.io": "promise+lazy/*",
+      "socket.io/client": "object/javascript+amd"
+    },
+    "modules": {
+      "config": "./default-config",
+      "[web] config": "./web-config",
+      "./file": "./concord-file",
+      "./ignored": false
+    }
+  }
+}
